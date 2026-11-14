@@ -50,7 +50,6 @@ set_site_information(
         "for mechanical engineering students."
     ),
     sources="Drafter documentation and class materials.",
-    planning=["GearBox_Planning.pdf"],
     links=[]
 )
 
