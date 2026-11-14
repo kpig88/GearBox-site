@@ -4,9 +4,7 @@ from dataclasses import dataclass, field
 import matplotlib.pyplot as plt
 
 
-# ---------------------------------------------------------
 # DATA CLASSES
-# ---------------------------------------------------------
 
 @dataclass
 class GearConfiguration:
@@ -37,9 +35,7 @@ class State:
     notes: str = ""
 
 
-# ---------------------------------------------------------
 # SITE SETTINGS
-# ---------------------------------------------------------
 
 set_website_title("GearBox")
 
