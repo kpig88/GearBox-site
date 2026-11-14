@@ -56,9 +56,7 @@ set_site_information(
 set_website_style("water")
 
 
-# ---------------------------------------------------------
 # CALCULATION FUNCTIONS
-# ---------------------------------------------------------
 
 def calculate_gear_values(
     input_rpm: float,
@@ -130,9 +128,7 @@ def navigation() -> list:
     ]
 
 
-# ---------------------------------------------------------
 # HOME PAGE
-# ---------------------------------------------------------
 
 @route
 def index(state: State) -> Page:
@@ -159,9 +155,7 @@ def index(state: State) -> Page:
     return Page(state, content)
 
 
-# ---------------------------------------------------------
 # CALCULATOR PAGE
-# ---------------------------------------------------------
 
 @route
 def calculator(state: State) -> Page:
@@ -205,9 +199,7 @@ def calculator(state: State) -> Page:
     return Page(state, content)
 
 
-# ---------------------------------------------------------
 # CALCULATE AND SAVE ROUTE
-# ---------------------------------------------------------
 
 @route
 def calculate(
@@ -277,9 +269,7 @@ def calculate(
     return results(state)
 
 
-# ---------------------------------------------------------
 # RESULTS PAGE
-# ---------------------------------------------------------
 
 @route
 def results(state: State) -> Page:
@@ -338,9 +328,7 @@ def results(state: State) -> Page:
     return Page(state, content)
 
 
-# ---------------------------------------------------------
 # COMPARISON PAGE
-# ---------------------------------------------------------
 
 @route
 def compare(state: State) -> Page:
@@ -412,9 +400,7 @@ def disable_comparison(state: State) -> Page:
     return compare(state)
 
 
-# ---------------------------------------------------------
 # GRAPHS PAGE
-# ---------------------------------------------------------
 
 @route
 def graphs(state: State) -> Page:
@@ -479,9 +465,7 @@ def choose_graph(state: State, graph_type: str) -> Page:
     return graphs(state)
 
 
-# ---------------------------------------------------------
 # SAVED CONFIGURATIONS PAGE
-# ---------------------------------------------------------
 
 @route
 def saved_configurations(state: State) -> Page:
@@ -543,9 +527,7 @@ def clear_configurations(state: State) -> Page:
     return saved_configurations(state)
 
 
-# ---------------------------------------------------------
 # GEAR GUIDE PAGE
-# ---------------------------------------------------------
 
 @route
 def gear_guide(state: State) -> Page:
@@ -591,9 +573,7 @@ def gear_guide(state: State) -> Page:
     return Page(state, content)
 
 
-# ---------------------------------------------------------
 # HELP PAGE
-# ---------------------------------------------------------
 
 @route
 def help(state: State) -> Page:
@@ -627,13 +607,7 @@ def help(state: State) -> Page:
     return Page(state, content)
 
 
-# ---------------------------------------------------------
 # BASIC UNIT TESTS
-# ---------------------------------------------------------
-
-# These tests check the calculation helper using a known example.
-# Page routes are also tested manually by using each page and form
-# in the running website, since they depend on Drafter components.
 
 def test_calculations() -> None:
     """Check that the gear calculation function gives correct results."""
@@ -664,8 +638,6 @@ def test_calculations() -> None:
 test_calculations()
 
 
-# ---------------------------------------------------------
 # START THE WEBSITE
-# ---------------------------------------------------------
 hide_debug_information()
 start_server(State())
